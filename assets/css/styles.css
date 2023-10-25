@@ -1,61 +1,146 @@
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald:wght@500&family=Sofia&display=swap');
 
-nav ul {
-    list-style: none;
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Sofia', cursive; */
+
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5em;
+}
+/* FUENTES  */
+h1{
+    font-size:  3vw;
+    font-family:'Montserrat', cursive;
+    text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+    }
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
+.header-p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5vw;}
+
+.main-section-p, .main-section-ul, article, p{
+    font-family: "Nunito";
+}
+/* ENCABEZADO GENERAL */
+.nav{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    background-color: #333;
+    text-align: center;
+    padding: 12px;
 }
-
-nav li {
-    margin: 0 20px;
-}
-
-nav a {
-    text-decoration: none;
+.nav-a{
     color: #fff;
-    font-weight: bold;
+    flex: 1;
+    text-decoration: none;
     transition: color 0.3s;
-}
-
-nav a:hover {
+    font-weight: bold; 
+}    
+.nav-a:hover {
     color: #ff9900;
 }
-
-footer {
-    background-color: #333;
-    color: #fff;
+header{
+    display: flex;
     text-align: center;
-    padding: 10px 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5rem;
+    height: 60vh;
 }
-
+/* CUERPO GENERAL */
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    /* grid-template-columns: repeat(3, 3fr); */
+    grid: 1fr 1fr 1fr;
+}
+/* PIE DE PAGINA GENERAL */
+footer {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+    font-size: 1.1vw;
+    
+}
+footer a {
+    text-decoration: none;
+    color: #ccc;
 }
 
-section {
-    background-color: #f4f4f4;
-    padding: 20px;
+/* CONTACTO CSS */
+.main-container-contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+.div-contact{display: flex;}
+    .contact{
+        background-color: lightgray;
+        flex: 1;
+        padding: 3em;
+    }
+    .a-contact{
+        text-decoration: none;
+        color: black;
+    }
+    .a-contact:hover{color: #ff9900;}
+
+form{
+    background-color: lightpink;
     text-align: center;
+    width: 45%;
+    border-radius: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+    position: relative;
+    left: 20em;
+    box-shadow: 0px 0px 20px 7px rgba(0, 0, 255, 0.25);
+    
 }
-
-.main-container {
+.input-to-fill {  
+        width: 90%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+}
+label {
+    font-weight: bold;
+}
+button[type="submit"] {
+    background-color: lightcyan;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* SERVICIOS CSS */
+.main-container-services{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
-
-.section-container {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
+.div-card{
+    padding: 10px;
+    border-bottom: 2px rgb(67, 66, 71) solid;
+    border-right: 2px rgb(67, 66, 71) solid;
+    box-shadow: 4px 4px 15px grey;
 }
